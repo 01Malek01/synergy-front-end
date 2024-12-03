@@ -49,7 +49,10 @@ export default function Header() {
                 "absolute top-2 right-3 bg-red-500 rounded-full h-4 w-4 flex items-center justify-center",
                 {
                   hidden:
-                    notificationsState.length === 0 || !notificationsState,
+                    notificationsState.length === 0 ||
+                    !notificationsState ||
+                    notificationsState === undefined ||
+                    notificationsState === null,
                 }
               )}
             >
